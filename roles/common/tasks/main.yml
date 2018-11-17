@@ -19,16 +19,16 @@
     name: UTC
   register: timezone
 
-- name: Enabling cgroup options at boot
-  copy:
-    src: cmdline.txt
-    dest: /boot/cmdline.txt
-    owner: root
-    group: root
-    mode: 0755
-  register: cmdline
-  tags:
-    - boot
+#- name: Enabling cgroup options at boot
+#  copy:
+#    src: cmdline.txt
+#    dest: /boot/cmdline.txt
+#    owner: root
+#    group: root
+#    mode: 0755
+#  register: cmdline
+#  tags:
+#    - boot
 
 - name: python-apt dependency
   shell: apt-get install -y python-apt
