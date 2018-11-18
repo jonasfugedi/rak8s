@@ -56,4 +56,4 @@
 - name: Reboot Message
   debug:
     msg: "A reboot is required but the reboot module is a little wonky. Hopefully someone fixes this soon."
-  when: cmdline or timezone or hostname is changed
+  when: timezone or hostname is changed

@@ -1,12 +1,10 @@
-[dev]
-pia    ansible_host=192.168.2.97
+[workers]
+pi1    ansible_host=192.168.2.97
 pi4    ansible_host=192.168.2.98
-pib    ansible_host=192.168.2.99
-
-[prod]
+pi6    ansible_host=192.168.2.99
 pi3    ansible_host=192.168.2.100
-pic    ansible_host=192.168.2.101
-pid    ansible_host=192.168.2.102
+pi5    ansible_host=192.168.2.101
+pi2    ansible_host=192.168.2.102
 
 [master]
 pi4
