@@ -3,8 +3,8 @@ pi1    ansible_host=10.11.12.47
 pi2    ansible_host=10.11.12.42
 pi3    ansible_host=10.11.12.46
 pi4    ansible_host=10.11.12.43
-pi6    ansible_host=10.11.12.44
-pi5    ansible_host=10.11.12.45
+pi5    ansible_host=10.11.12.44
+pi6    ansible_host=10.11.12.45
 
 [master]
 pi4
