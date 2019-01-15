@@ -1,11 +1,20 @@
 [workers]
-pi1    ansible_host=192.168.2.97
-pi4    ansible_host=192.168.2.98
-pi6    ansible_host=192.168.2.99
-pi3    ansible_host=192.168.2.100
-pi5    ansible_host=192.168.2.101
-pi2    ansible_host=192.168.2.102
+pi1    ansible_host=10.11.12.47
+pi2    ansible_host=10.11.12.42
+pi3    ansible_host=10.11.12.46
+pi4    ansible_host=10.11.12.43
+pi6    ansible_host=10.11.12.44
+pi5    ansible_host=10.11.12.45
 
 [master]
 pi4
 
+[rack1]
+pi1
+pi2
+pi3
+
+[rack2]
+pi4
+pi5
+pi6
