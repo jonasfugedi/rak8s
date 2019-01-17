@@ -46,14 +46,17 @@
   apt:
     upgrade: full
 
-#- name: Reboot (as needed)
-#  reboot:
-#    reboot_timeout: 3600
-#  when: cmdline or timezone or hostname is changed
-#  tags:
-#    - boot
-#    - shutdown
-- name: Reboot Message
-  debug:
-    msg: "A reboot is required but the reboot module is a little wonky. Hopefully someone fixes this soon."
-  when: timezone or hostname is changed
+- name: Reboot
+  shell: sleep 2 && shutdown -r now "Ansible Reboot"
+  async: 1
+  poll: 0
+  ignore_errors: True
+
+- name: Wait for Reboot
+  local_action: wait_for
+  args:
+    host: "{{ inventory_hostname }}"
+    port: 22
+    delay: 15
+    timeout: 120
+  become: False
